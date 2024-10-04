@@ -1,5 +1,5 @@
 # Wazuh App Copyright (C) 2017, Wazuh Inc. (License GPLv2)
-version: '3'
+version: "3"
 
 services:
   generator:
@@ -8,3 +8,5 @@ services:
     volumes:
       - ./config/wazuh_indexer_ssl_certs/:/certificates/
       - ./config/certs.yml:/config/certs.yml
+    environment:
+      - HTTP_PROXY=wazuh.ad-ins.com
